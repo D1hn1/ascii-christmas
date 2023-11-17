@@ -10,6 +10,7 @@ GRAY="\e[37m"
 
 ENDCL="\e[0m"
 
+BOLD="\033[1m"
 BLINK="\033[5m"
 ENDBLINK="\033[0m"
 
@@ -31,7 +32,7 @@ function random_things () {
 	case $1 in
 
 		0)
-			echo -ne "$ROJO$2$ENDCL"
+			echo -ne "$BOLD$ROJO$2$ENDCL$ENDBLINK"
 		;;
 
 		1)
