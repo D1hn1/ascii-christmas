@@ -14,7 +14,7 @@ BLINK="\033[5m"
 ENDBLINK="\033[0m"
 
 if [[ ! $1 ]]; then
-	echo "Ussage: ./Navidad 9"
+	echo "Ussage: $0 9"
 	exit 1
 fi
 
