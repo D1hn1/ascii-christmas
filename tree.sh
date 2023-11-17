@@ -119,10 +119,10 @@ for (( x=1; x < $1+1; x++ )); do
 
 done
 
-spaces $spaces_final
-echo -ne "\e[33m||\e[0m"
+spaces $((spaces_final-1))
+echo -ne "\e[33mmWm\e[0m"
 echo
-spaces $spaces_final
-echo -ne "\e[33m||\e[0m"
+spaces $((spaces_final-1))
+echo -ne "\e[33mmWm\e[0m"
 echo -ne "  \e[31m[][]\e[0m"
 echo
