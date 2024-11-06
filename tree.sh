@@ -88,10 +88,16 @@ for (( x=1; x < $1+1; x++ )); do
 	if [[ $x == 1 ]]; then
 		spaces_final=$(($1-$x))
 		random_things $rand_num "*"
-	
+
+	elif [[ $(($x % 3)) == 0 ]]; then
+		rand_num=$(($RANDOM%10))
+		for (( y=1; y < $(($x*2)); y++ )); do
+			random_things $rand_num "*"
+		done
+
 	elif [ $x -gt 9 ]; then
 
-		for (( y=1; y < $x; y++ )); do
+		for (( y=1; $y < $x; y++ )); do
 			rand_num=$(($RANDOM%10))
 			random_things $rand_num $((y%10))
 		done
